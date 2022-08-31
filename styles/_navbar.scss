@@ -1,0 +1,39 @@
+.navbar{
+    width: 100%;
+    background: var(--primary);
+    color: white;
+
+    &-list{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      align-items: center;
+      padding: var(--s-sm);
+      font-size: var(--f-md);
+    }
+    
+    &__brand{
+      font-size: var(--f-lg);
+      font-weight: bold;
+    }
+
+    &__item{
+
+      &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    &-search-form{
+      width: 40%;
+      margin-inline: var(--s-lg);
+
+      &__input{
+        padding: var(--s-xs);
+        width: 100%;
+      }
+    }
+  }
+  
+  

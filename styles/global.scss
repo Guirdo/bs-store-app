@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;500&display=swap');
+
+:root{
+  --s-xs: 8px;
+  --s-sm: 12px;
+  --s-md: 16px;
+  --s-lg: 20px;
+
+  --f-md: 16px;
+  --f-lg: 20px;
+
+  //color
+
+  --primary: #fb6d34;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+
+body,html{
+  background: #eeeded;
+  height: 100%;
+  width: 100%;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 264px auto;
+  grid-template-rows: 1fr;
+}
+
+//Objects
+@import './navbar';
+@import './product';
+@import './category';
