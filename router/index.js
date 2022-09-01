@@ -9,11 +9,18 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 const router = async () => {
+    //Rendering Navbar
+    document.querySelector('header').innerHTML = Navbar()
+
+    //Rendering Category menu
+    const categories = await getCategories()
+    document.querySelector('.category-menu').innerHTML = CategoryMenu(categories)
+
     let products
     if (params.category) {
         const category = await getCategory(params.category)
         document.querySelector('.product-title').innerHTML = `Categoria ${category[0].name.toUpperCase()}`
-        
+
         products = await getProductByCategory(params.category)
     } else if (params.searching) {
         document.querySelector('.product-title').innerHTML = `Resultados para ${params.searching}`
@@ -27,7 +34,7 @@ const router = async () => {
         document.querySelector('.product-list').innerHTML = products.map(product => (`
             ${ProductItem(product)}
         `)).join("")
-    }else{
+    } else {
         document.querySelector('.product-title').innerHTML = `
             No existe ningún resultado para tu busqueda
         `

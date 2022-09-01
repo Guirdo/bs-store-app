@@ -6,11 +6,4 @@ import router from './router'
 
 window.addEventListener('load', router)
 
-//Rendering Navbar
-document.querySelector('header').innerHTML = Navbar()
-
-//Rendering Category menu
-const categories = await getCategories()
-document.querySelector('.category-menu').innerHTML = CategoryMenu(categories)
-
 
