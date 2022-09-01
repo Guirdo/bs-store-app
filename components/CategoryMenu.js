@@ -1,9 +1,9 @@
-const CategoryMenu = () => {
+const CategoryMenu = (categories) => {
     return `
     <ul class="category-list">
-        <li class="category__item">Snacks</li>
-        <li class="category__item">Bebidas</li>
-        <li class="category__item">Cerveza</li>
+        ${categories.map(category =>(
+            `<li class="category__item">${category.name.toUpperCase()}</li>`
+        )).join('')}
     </ul>
     `
 }

@@ -1,15 +1,16 @@
 
-const ProductItem = () => {
+const ProductItem = ({name,url_image,price}) => {
     return `
     <div class="product-item">
         <figure>
             <img 
-                src="https://picsum.photos/200" 
+                class="product__image"
+                src="${url_image}" 
                 alt="product image"
             />
         </figure>
-        <h3>Product name</h3>
-        <span>$14.99</span>
+        <h3>${name}</h3>
+        <span>${price}</span>
         <span>Icon</span>
     </div>
     `
