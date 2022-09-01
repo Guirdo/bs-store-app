@@ -6,12 +6,11 @@ const ProductItem = ({name,url_image,price}) => {
             <img 
                 class="product__image"
                 src="${url_image}" 
-                alt="product image"
+                alt="${name}"
             />
         </figure>
-        <h3>${name}</h3>
-        <span>${price}</span>
-        <span>Icon</span>
+        <h4>${name}</h4>
+        <span>$${price}</span>
     </div>
     `
 }

@@ -2,7 +2,12 @@ const Navbar = () => {
     return `
     <nav class="navbar">
         <ul class="navbar-list">
-            <li class="navbar__brand">BS Store</li>
+            <a 
+                class="navbar__brand"
+                href="/"
+            >
+                <li >BS Store</li>
+            </a>
             <li class="navbar-search-form">
                 <form>
                     <input 
@@ -12,11 +17,6 @@ const Navbar = () => {
                         placeholder="Buscar producto"
                     />
                 </form>
-            </li>
-            <li>
-                <span>
-                    <i class="iconoir-add-to-cart"></i>
-                </span>
             </li>
         </ul>
     </nav>

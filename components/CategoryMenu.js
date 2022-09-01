@@ -2,7 +2,12 @@ const CategoryMenu = (categories) => {
     return `
     <ul class="category-list">
         ${categories.map(category =>(
-            `<li class="category__item">${category.name.toUpperCase()}</li>`
+            `<a 
+                class="category__item"
+                href="?category=${category.id}"
+            >
+                <li >${category.name.toUpperCase()}</li>
+            </a>`
         )).join('')}
     </ul>
     `

@@ -1,6 +1,7 @@
 .category{
     &-menu{
         width: 264px;
+        background: white;
         border-right: 2px solid gainsboro;
     }
 
@@ -15,6 +16,8 @@
 
     &__item{
         padding: var(--s-sm);
+        text-decoration: none;
+        color: inherit;
 
         &:hover{
             cursor: pointer;
