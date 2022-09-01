@@ -1,5 +1,5 @@
 const getAllProducts = async() => {
-    const response = await fetch('http://localhost:4000/product', {
+    const response = await fetch('https://bs-store-api.vercel.app/product', {
         method: 'GET',
         cache:"default",
         headers: {

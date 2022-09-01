@@ -1,5 +1,5 @@
 const getCategories = async() => {
-    const response = await fetch('http://localhost:4000/category', {
+    const response = await fetch('https://bs-store-api.vercel.app/category', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
