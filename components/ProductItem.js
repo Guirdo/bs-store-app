@@ -1,5 +1,5 @@
 
-const ProductItem = ({name,url_image,price}) => {
+const ProductItem = ({name,url_image,price,discount}) => {
     return `
     <div class="product-item">
         <figure>
@@ -10,7 +10,13 @@ const ProductItem = ({name,url_image,price}) => {
             />
         </figure>
         <h4>${name}</h4>
-        <span>$${price}</span>
+        <div class="product-price-tag">
+            <span>$${price}</span>
+            ${discount > 0 ? 
+                `<span class="product__discount">${discount}% OFF</span>`
+                : ''
+            }
+        </div>
     </div>
     `
 }

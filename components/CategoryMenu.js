@@ -6,7 +6,7 @@ const CategoryMenu = (categories) => {
                 class="category__item"
                 href="?category=${category.id}"
             >
-                <li >${category.name.toUpperCase()}</li>
+                <li>${category.name.toUpperCase()}</li>
             </a>`
         )).join('')}
     </ul>

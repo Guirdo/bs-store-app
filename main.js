@@ -13,6 +13,4 @@ document.querySelector('header').innerHTML = Navbar()
 const categories = await getCategories()
 document.querySelector('.category-menu').innerHTML = CategoryMenu(categories)
 
-//Rendering Product list
-
 
