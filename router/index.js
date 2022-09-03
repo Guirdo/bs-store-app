@@ -12,9 +12,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 const router = async () => {
-    //Rendering Navbar
-    document.querySelector('header').innerHTML = Navbar()
-
     //Rendering Category menu
     const categories = await getCategories()
     document.querySelector('.category-menu').innerHTML = CategoryMenu(categories)

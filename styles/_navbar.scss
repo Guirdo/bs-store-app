@@ -27,13 +27,24 @@
       }
     }
 
+    &-search{
+      width: 40%;
+    }
+
     &-search-form{
-      width: 50%;
       margin-inline: var(--s-lg);
+      display: flex;
+      flex-direction: row;
 
       &__input{
         padding: var(--s-xs);
         width: 100%;
+      }
+
+      &__button{
+        background: var(--primary);
+        border: 1px solid white;
+        padding: var(--s-xs);
       }
     }
   }

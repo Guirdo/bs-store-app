@@ -38,4 +38,13 @@
         color: green;
     }
 
+    &-add-to-cart{
+        background: var(--secondary);
+        border: 1px solid var(--secondary);
+        border-radius: 50%;
+        color: var(--secondary);
+        padding: var(--s-xs);   
+        width: 32px;
+    }
+
 }
