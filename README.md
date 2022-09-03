@@ -17,7 +17,13 @@ En esta página se consumen los datos de la BS Store API para la presentación d
 
 ## Demo
 
+![download](https://user-images.githubusercontent.com/21044700/188290578-6aabbdc5-1399-4ffe-ad11-4742f23d10f8.png)
 
+![download](https://user-images.githubusercontent.com/21044700/188290585-e27fe3b3-aa2a-47a6-a760-b82c0107e26a.png)
+
+![download](https://user-images.githubusercontent.com/21044700/188290609-cdcf0f08-bc03-49f0-8a50-58201eca1b33.png)
+
+![download](https://user-images.githubusercontent.com/21044700/188290617-ab8d57d6-8473-4b68-9e01-6c17de127417.png)
 
 ## Instalacion
 
