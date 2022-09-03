@@ -2,8 +2,8 @@
     &-list{
         display: grid;
         grid-template-columns: repeat(auto-fit, 220px);
-        justify-content: space-between;
-        row-gap: var(--s-lg);
+        justify-content: center;
+        gap: var(--s-lg);
         height: 100%;
         padding: var(--s-lg);
     }
