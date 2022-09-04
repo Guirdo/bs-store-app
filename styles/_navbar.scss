@@ -1,52 +1,60 @@
-.navbar{
-    width: 100%;
-    background: var(--primary);
-    color: white;
+.navbar {
+  width: 100%;
+  background: var(--primary);
+  color: white;
 
-    &-list{
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      align-items: center;
-      padding: var(--s-sm);
-      font-size: var(--f-md);
+  &-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    padding: var(--s-sm);
+    font-size: var(--f-md);
+
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr;
     }
-    
-    &__brand{
-      font-size: var(--f-lg);
-      font-weight: bold;
-      text-decoration: none;
-      color: inherit;
+  }
+
+  &__brand {
+    font-size: var(--f-lg);
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &-search {
+    width: 40%;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &-search-form {
+    margin-inline: var(--s-lg);
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 767px) {
+      margin-left: var(--s-sm);
     }
 
-    &__item{
-
-      &:hover{
-        text-decoration: underline;
-        cursor: pointer;
-      }
+    &__input {
+      padding: var(--s-xs);
+      width: 100%;
     }
 
-    &-search{
-      width: 40%;
-    }
+    &__button {
+      background: var(--primary);
+      border: 1px solid white;
+      padding: var(--s-xs);
 
-    &-search-form{
-      margin-inline: var(--s-lg);
-      display: flex;
-      flex-direction: row;
-
-      &__input{
-        padding: var(--s-xs);
-        width: 100%;
-      }
-
-      &__button{
-        background: var(--primary);
-        border: 1px solid white;
-        padding: var(--s-xs);
+      @media screen and (max-width: 767px) {
+        display: none;
       }
     }
   }
-  
-  
+}

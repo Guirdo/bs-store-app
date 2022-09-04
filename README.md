@@ -8,6 +8,8 @@
 - [Instalación](#instalacion)
 - [Stack](#stack)
 - [Estructura del proyecto](#estructura-del-proyecto)
+- [Licencia](#licencia)
+- [Autor](#autor)
 
 ## Resumen
 
@@ -54,10 +56,10 @@ npm run dev
 - ```index.html```: Página principal del sistema.
 - ```main.js```: Inicializador del sistema 
 
-## License
+## Licencia
 
 > Este proyecto tiene una licencia MIT
 
-## Author
+## Autor
 
 Hecho con :heart: por [Guirdo](https://github.com/Guirdo)
