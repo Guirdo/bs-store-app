@@ -18,7 +18,7 @@ const router = async () => {
     let products
     if (params.category) {
         const category = await getCategory(params.category)
-        document.querySelector('.product-title').innerHTML = `Categoria ${category[0].name.toUpperCase()}`
+        document.querySelector('.product-title').innerHTML = `Categoría ${category[0].name.toUpperCase()}`
 
         products = await getProductByCategory(params.category)
     } else if (params.searching) {

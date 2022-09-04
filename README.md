@@ -13,7 +13,7 @@
 
 ## Resumen
 
-Esta página fue realiza para la prueba técnica de BSale para el puesto de desarrollador de software.
+Esta página fue realizada para la prueba técnica de BSale para el puesto de desarrollador de software.
 
 En esta página se consumen los datos de la BS Store API para la presentación de los productos de una tienda, separados por categorias y con las posibilidad de buscar entre los productos.
 
@@ -29,7 +29,7 @@ En esta página se consumen los datos de la BS Store API para la presentación d
 
 ## Instalacion
 
-1. Clona este respositorio
+1. Clona este repositorio
 ``` bash
 git clone https://github.com/Guirdo/bs-store-app.git
 ```
@@ -50,8 +50,8 @@ npm run dev
 
 - ```components/```: Componentes individuales de la interfaz de usuario.
 - ```helpers/```: Funciones que ayudan para consumir la BS Store API.
-- ```public/```: Iconos para la interfez de usuario
-- ```router/```: Router del sistema que se encarga de renderizar lo que corresponda según los parametros en la URL.
+- ```public/```: Iconos para la interfaz de usuario
+- ```router/```: Router del sistema que se encarga de renderizar lo que corresponda según los parámetros en la URL.
 - ```styles```: Estilos del sistema.
 - ```index.html```: Página principal del sistema.
 - ```main.js```: Inicializador del sistema 
