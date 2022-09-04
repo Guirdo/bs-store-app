@@ -6,6 +6,8 @@
 
         @media screen and (max-width: 767px) {
             width: 100%;
+            border-right: none;
+            border-bottom: 2px solid gainsboro;
         }
     }
 
@@ -20,6 +22,7 @@
         @media screen and (max-width: 767px) {
             flex-direction: row;
             flex-wrap: wrap;
+            padding-inline: var(--s-xs);
         }
     }
 
@@ -30,6 +33,10 @@
 
         &:hover {
             cursor: pointer;
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 767px) {
             text-decoration: underline;
         }
     }

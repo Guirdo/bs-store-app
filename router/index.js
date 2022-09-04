@@ -1,5 +1,4 @@
 import CategoryMenu from "../components/CategoryMenu";
-import Navbar from "../components/Navbar";
 import ProductItem from "../components/ProductItem";
 import getAllProducts from "../helpers/getAllProducts";
 import getCategories from "../helpers/getCategories";
@@ -36,7 +35,7 @@ const router = async () => {
         `)).join("")
     } else {
         document.querySelector('.product-title').innerHTML = `
-            No existe ningún resultado para tu busqueda
+            No existe ningún resultado para tu búsqueda
         `
     }
 }
