@@ -12,33 +12,8 @@ const redirectToHome = () => {
     document.location.href = newURL
 }
 
-const router = async () => {
-    let products
-    let [_, func, param] = getHash()
-
-    switch (func) {
-        case 'category':
-            const category = await getCategory(param)
-            document.querySelector('.product-title').innerHTML = `Categoría ${category[0].name.toUpperCase()}`
-
-            products = await getProductByCategory(param)
-            break
-
-        case 'search':
-            document.querySelector('.product-title').innerHTML = `Resultados para ${param}`
-            products = await searchProduct(param)
-            break
-
-        case '':
-            document.querySelector('.product-title').innerHTML = 'Todos'
-            products = await getAllProducts()
-            break
-
-        default:
-            redirectToHome()
-    }
-
-    if (products?.length > 0 && products) {
+const renderProducts = (products) => {
+    if (products && products?.length > 0) {
         document.querySelector('.product-list').innerHTML = products.map(product => (`
             ${ProductItem(product)}
         `)).join("")
@@ -46,6 +21,31 @@ const router = async () => {
         document.querySelector('.product-title').innerHTML = `
             No existe ningún resultado para tu búsqueda
         `
+    }
+}
+
+const router = async () => {
+
+    let [_, func, param] = getHash()
+
+    if (func === 'category') {
+        const category = await getCategory(param)
+        document.querySelector('.product-title').innerHTML = `Categoría ${category[0].name.toUpperCase()}`
+
+        const { products } = await getProductByCategory(param)
+        renderProducts(products)
+    } else if (funct === 'search') {
+        document.querySelector('.product-title').innerHTML = `Resultados para ${param}`
+
+        const { products } = await searchProduct(param)
+        renderProducts(products)
+    } else if (func === '') {
+        document.querySelector('.product-title').innerHTML = 'Todos'
+
+        const { products } = await getAllProducts()
+        renderProducts(products)
+    } else {
+        redirectToHome()
     }
 }
 

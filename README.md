@@ -52,7 +52,7 @@ npm run dev
 - ```helpers/```: Funciones que ayudan para consumir la BS Store API.
 - ```public/```: Iconos para la interfaz de usuario
 - ```router/```: Router del sistema que se encarga de renderizar lo que corresponda según los parámetros en la URL.
-- ```styles```: Estilos del sistema.
+- ```styles/```: Estilos del sistema.
 - ```index.html```: Página principal del sistema.
 - ```main.js```: Inicializador del sistema 
 
