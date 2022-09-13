@@ -1,4 +1,8 @@
-
+/**
+ * Funcion que renderiza el elemento individual de un producto
+ * @param {Object} product - Objeto con la información de un producto 
+ * @returns {String} - Plantilla del componente
+ */
 const ProductItem = ({name,url_image,price,discount}) => {
     return `
     <div class="product-item">

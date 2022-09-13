@@ -1,3 +1,9 @@
+/**
+ * Función encargada de renderizar el menu de categorias
+ * disponibles
+ * @param {Array} categories - Lista de categorias
+ * @returns {String} Plantilla del componente
+ */
 const CategoryMenu = (categories) => {
     return `
     <ul class="category-list">

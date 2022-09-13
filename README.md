@@ -53,6 +53,7 @@ npm run dev
 - ```public/```: Iconos para la interfaz de usuario
 - ```router/```: Router del sistema que se encarga de renderizar lo que corresponda según los parámetros en la URL.
 - ```styles/```: Estilos del sistema.
+- ```utils/```: Funciones utiles y sencillas para el sistema.
 - ```index.html```: Página principal del sistema.
 - ```main.js```: Inicializador del sistema 
 
