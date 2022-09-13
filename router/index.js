@@ -1,3 +1,4 @@
+import Pagination from "../components/Pagination";
 import ProductItem from "../components/ProductItem";
 import getAllProducts from "../helpers/getAllProducts";
 import getCategory from "../helpers/getCategory";
@@ -24,26 +25,45 @@ const renderProducts = (products) => {
     }
 }
 
-const router = async () => {
+const renderPagination = (hash, pagination) => {
+    const { currentPage, numberOfPages } = pagination
+    if (numberOfPages > 1) {
+        document.querySelector('.pagination').innerHTML = Pagination(
+            hash,
+            currentPage,
+            numberOfPages
+        )
+    }else{
+        document.querySelector('.pagination').innerHTML = ''
+    }
+}
 
-    let [_, func, param] = getHash()
+const router = async () => {
+    let [_, func, param,__, page] = getHash()
 
     if (func === 'category') {
         const category = await getCategory(param)
         document.querySelector('.product-title').innerHTML = `Categoría ${category[0].name.toUpperCase()}`
 
-        const { products } = await getProductByCategory(param)
+        const { pagination, products } = await getProductByCategory(param,page)
         renderProducts(products)
-    } else if (funct === 'search') {
+        renderPagination(`#/category/${param}`, pagination)
+
+    } else if (func === 'search') {
         document.querySelector('.product-title').innerHTML = `Resultados para ${param}`
 
-        const { products } = await searchProduct(param)
+        const { pagination, products } = await searchProduct(param,page)
         renderProducts(products)
-    } else if (func === '') {
+        renderPagination(`#/search/${param}`, pagination)
+
+    } else if (func === '' || func === 'page') {
         document.querySelector('.product-title').innerHTML = 'Todos'
 
-        const { products } = await getAllProducts()
+        const { pagination, products } = await getAllProducts(param)
+        console.log(pagination)
         renderProducts(products)
+        renderPagination('#', pagination)
+
     } else {
         redirectToHome()
     }
