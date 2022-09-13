@@ -4,7 +4,7 @@ const CategoryMenu = (categories) => {
         ${categories.map(category =>(
             `<a 
                 class="category__item"
-                href="?category=${category.id}"
+                href="#/category/${category.id}"
             >
                 <li>${category.name.toUpperCase()}</li>
             </a>`
