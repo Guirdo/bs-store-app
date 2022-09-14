@@ -23,7 +23,7 @@ const Pagination = (hash, currentPage, numberOfPages) => {
         </div>
         <a
             class="pagination__button ${currentPage === numberOfPages && 'pagination__button--disabled'}"
-            href="${hash}/page/${currentPage + 1 === numberOfPages ? currentPage + 1 : numberOfPages}"
+            href="${hash}/page/${currentPage + 1 < numberOfPages ? currentPage + 1 : numberOfPages}"
         >
             Siguiente${' ->'}
         </a>
