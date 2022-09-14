@@ -10,7 +10,7 @@ const Pagination = (hash, currentPage, numberOfPages) => {
     return `
         <a 
             class="pagination__button ${currentPage === 1 && 'pagination__button--disabled'}"
-            href="${hash}/page/${currentPage - 1}"
+            href="${hash}/page/${currentPage - 1 !== 0 ? currentPage - 1 : 1}"
         >
             ${'<- '}Anterior
         </a>
@@ -23,7 +23,7 @@ const Pagination = (hash, currentPage, numberOfPages) => {
         </div>
         <a
             class="pagination__button ${currentPage === numberOfPages && 'pagination__button--disabled'}"
-            href="${hash}/page/${currentPage + 1}"
+            href="${hash}/page/${currentPage + 1 === numberOfPages ? currentPage + 1 : numberOfPages}"
         >
             Siguiente${' ->'}
         </a>
